@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cachoeira do Moinho · Ipameri-GO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="trilha.css" />
+</head>
+
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-brand">
+      <div class="nav-logo-icon">🌿</div><span class="nav-brand-text">Ipameri Ecoturismo</span>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html" class="nav-link">Início</a>
+      <a href="../o_que_e/o-que-e.html" class="nav-link">O que é Ecopedagogia</a>
+      <a href="../onde-fica/onde-fica.html" class="nav-link">Onde fica Ipameri?</a>
+      <a href="../seguranca/seguranca.html" class="nav-link">Dicas de segurança</a>
+      <a href="../autora/autora.html" class="nav-link">Autora</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="nav-author">
+        <div class="author-avatar">S</div><span>Simone F. S. Nunes</span>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="trilha-hero-img">
+    <div class="trilha-hero-img-wrap">
+      <img src="../image/moinho/image.png" alt="Cachoeira do Moinho" />
+      <div class="trilha-hero-img-overlay"></div>
+    </div>
+    <div class="trilha-hero-img-content">
+      <a href="../index.html#trilhas" class="btn-voltar">← Voltar às trilhas</a>
+      <span class="label-tag">Trilha</span>
+      <h1>Cachoeira do<br><em>Moinho</em></h1>
+      <p>Ipameri — Goiás, Brasil</p>
+    </div>
+  </section>
+
+  <main class="trilha-main">
+    <div class="container">
+
+      <section class="trilha-section" style="margin-bottom: 40px;">
+        <h2>Galeria de Fotos</h2>
+        <div id="galeria-fotos" class="galeria-container"></div>
+      </section>
+
+      <div class="trilha-grid">
+        <div class="trilha-col-text">
+          <div class="trilha-section trilha-section-mapa">
+            <h2>Mapa do Percurso</h2>
+            <p class="mapa-coord">📍 Rota de Ipameri até a Cachoeira do Moinho</p>
+            <div class="mapa-embed-wrap">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120000!2d-48.2!3d-17.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQwJzEyLjAiUyA0OMKwMDUnNDUuMCJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr"
+                width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Cachoeira+do+Moinho+Ipameri" target="_blank"
+              class="btn-gmaps-full">
+              Abrir rota completa no Google Maps
+            </a>
+          </div>
+        </div>
+
+        <aside class="trilha-col-info">
+          <div class="info-card">
+            <h3>Informações de Acesso</h3>
+            <div class="info-item"><span class="info-icon">📍</span>
+              <div><strong>Distância</strong><span>~29 km de Ipameri</span></div>
+            </div>
+            <div class="info-item"><span class="info-icon">🚗</span>
+              <div><strong>Acesso</strong><span>Carro + 1,3km caminhada (20 min)</span></div>
+            </div>
+            <div class="info-item"><span class="info-icon">⚡</span>
+              <div><strong>Dificuldade</strong><span>Fácil</span></div>
+            </div>
+            <div class="info-item"><span class="info-icon">🌿</span>
+              <div><strong>Bioma</strong><span>Cerrado</span></div>
+            </div>
+          </div>
+          <div class="info-card info-card-dica">
+            <h3>💡 Dica</h3>
+            <p>Leve calçado confortável para 20 minutos de caminhada.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🌿 Ipameri Ecoturismo</div>
+          <p>Guia para Turismo Ecopedagógico.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4><a href="../index.html">Início</a><a href="../o_que_e/o-que-e.html">Ecopedagogia</a>
+        </div>
+        <div class="footer-info">
+          <h4>Sobre</h4>
+          <p>Elaborado por <strong>Simone F. S. Nunes</strong></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Guia Ecopedagógico de Ipameri-GO</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../galeria.js"></script>
+  <script>
+    galeriaSequencial('galeria-fotos', '../image/moinho', 'png', 10);
+    window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10); });
+    document.getElementById('hamburger').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+.page-banner {
+  margin-top: 64px;
+  background: linear-gradient(135deg, #c8ddb0 0%, #b8d49e 100%);
+  padding: 28px 32px;
+  text-align: center;
+  border-bottom: 1px solid #a8c48a;
+}
+
+.page-banner h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 700;
+  color: #1a3a0e;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-main {
+  background: #fff;
+  padding: 48px 0 72px;
+  min-height: 60vh;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 48px;
+}
+.intro-text p {
+  font-size: 15px;
+  color: #1c2318;
+  line-height: 1.75;
+}
+
+.map-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.map-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 600px) {
+  .page-banner { padding: 20px 16px; }
+  .page-main { padding: 32px 0 48px; }
+  .map-img { max-width: 100%; }
+}

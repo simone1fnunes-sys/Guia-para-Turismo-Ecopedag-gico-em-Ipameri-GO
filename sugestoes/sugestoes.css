@@ -1,0 +1,186 @@
+/* =========================================================
+   SUGESTÕES DE ATIVIDADES - ESTILOS DA PÁGINA
+   Foco em UX/UI: Leitura escaneável, Cartões e Ritmo Visual
+========================================================= */
+
+/* ─── BANNER DA PÁGINA ─── */
+.page-banner {
+  margin-top: 64px;
+  background: linear-gradient(135deg, var(--green-100) 0%, var(--green-300) 100%);
+  padding: 36px 32px;
+  text-align: center;
+  border-bottom: 1px solid var(--green-400);
+}
+
+.page-banner h1 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 700;
+  color: var(--green-900);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ─── CONTEÚDO PRINCIPAL ─── */
+.page-main {
+  background: var(--green-50); /* Fundo levemente colorido para destacar os cartões brancos */
+  padding: 56px 0;
+  min-height: 60vh;
+}
+
+.page-content {
+  max-width: 800px; /* Largura ideal para não cansar a leitura */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* Espaçamento entre os blocos e cartões */
+}
+
+/* ─── INTRODUÇÃO ─── */
+.quote-block {
+  background: var(--white);
+  padding: 24px 32px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--green-300);
+}
+
+.quote-text {
+  font-size: 16px;
+  color: var(--dark);
+  line-height: 1.85;
+  text-align: justify;
+  font-style: normal;
+}
+
+/* Ocultando a linha separadora antiga, pois os cartões já separam o conteúdo */
+.sep {
+  display: none; 
+}
+
+/* ─── CARTÕES DE ATIVIDADES (UX: Chunking) ─── */
+.section-block {
+  background: var(--white);
+  border: 1px solid var(--green-100);
+  border-left: 6px solid var(--green-400); /* Detalhe lateral charmoso */
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+/* Efeito de flutuar ao passar o mouse */
+.section-block:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--green-500);
+}
+
+/* ─── CABEÇALHO DO CARTÃO & ÍCONES ─── */
+.section-block-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--green-50);
+  padding-bottom: 16px;
+}
+
+/* Moldura para os Emojis */
+.section-block-header span {
+  font-size: 24px;
+  flex-shrink: 0;
+  background: var(--green-50);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--green-100);
+}
+
+.section-block-header h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--green-900);
+}
+
+/* ─── TEXTOS E TAGS (UX: Escaneabilidade) ─── */
+.section-block p {
+  font-size: 15px;
+  color: var(--gray-700);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Transformando os títulos em negrito (Apresentação, Objetivo, etc.) em Tags */
+.section-block p strong {
+  color: var(--green-900);
+  font-weight: 600;
+  background: var(--green-100);
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 4px;
+  margin-right: 6px;
+  letter-spacing: 0.3px;
+}
+
+/* ─── LISTAS COM SETINHAS ─── */
+.activity-list {
+  list-style-type: none; /* Remove a bolinha padrão */
+  padding-left: 12px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity-list li {
+  font-size: 15px;
+  color: var(--gray-700);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Criando o marcador personalizado (» verde) */
+.activity-list li::before {
+  content: "»"; 
+  position: absolute;
+  left: 0;
+  color: var(--green-500);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* ─── RESPONSIVIDADE (Telas menores) ─── */
+@media (max-width: 768px) {
+  .page-banner { 
+    padding: 24px 20px; 
+  }
+  .page-main { 
+    padding: 40px 20px; /* Adiciona respiro nas laterais do celular */
+  }
+  .section-block {
+    padding: 24px; /* Reduz o padding interno dos cartões no celular */
+  }
+  .section-block-header h2 { 
+    font-size: 18px; 
+  }
+  .section-block-header span {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

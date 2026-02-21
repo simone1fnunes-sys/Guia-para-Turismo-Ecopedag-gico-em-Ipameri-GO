@@ -1,0 +1,99 @@
+/* --- ESTILOS ESPECÍFICOS DA PÁGINA DE AUTORA --- */
+
+/* Ajuste na cor da tag do Hero */
+.tag-autora {
+  background: var(--green-300, #8fcc6a);
+  border-color: var(--green-300, #8fcc6a);
+  color: var(--green-900, #0f2905);
+}
+
+/* Header da Galeria */
+.galeria-section {
+  margin-bottom: 40px;
+}
+
+.galeria-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.galeria-header h2 {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  color: var(--green-900, #1a3a0e);
+}
+
+.galeria-header span {
+  font-size: 13px;
+  color: var(--gray-500, #666);
+  font-weight: 500;
+}
+
+/* --- GRID DA GALERIA DE AUTORA --- */
+.galeria-autora {
+  display: grid;
+  /* Colunas menores para criar efeito de mural */
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  grid-auto-flow: dense; /* Ajuda a encaixar as fotos perfeitamente */
+}
+
+/* CORREÇÃO: Estilizando a tag img diretamente, já que o JS cria <img> */
+.galeria-autora img {
+  width: 100%;
+  height: 200px; /* Altura padrão para as fotos menores */
+  object-fit: cover;
+  border-radius: var(--radius-sm, 6px);
+  box-shadow: var(--shadow-sm, 0 4px 12px rgba(0,0,0,0.08));
+  transition: transform 0.3s ease;
+  border: 4px solid #fff; /* Borda branca estilo fotografia impressa */
+}
+
+/* --- DESTAQUE PARA A FOTO DE PERFIL (A PRIMEIRA DA LISTA) --- */
+.galeria-autora img:first-child {
+  grid-column: span 2; /* Ocupa 2 colunas de largura */
+  grid-row: span 2;    /* Ocupa 2 linhas de altura */
+  height: 100%;
+  min-height: 416px;   /* Altura de 2 fotos (200px * 2) + o gap de 16px */
+  object-position: top center; /* Foca no rosto se a imagem for cortada */
+  border: 0; 
+  border-radius: var(--radius-md, 12px);
+  box-shadow: var(--shadow-md, 0 10px 30px rgba(0,0,0,0.15));
+}
+
+.galeria-autora img:hover {
+  transform: translateY(-4px);
+  z-index: 2;
+}
+
+/* Estilo do Texto Biográfico */
+.content-bio p {
+  line-height: 1.8;
+  color: var(--gray-700, #3a4a30);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.content-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar Profile */
+.card-profile {
+  border-top-color: var(--green-400, #6aaa45);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 600px) {
+  .galeria-autora {
+    grid-template-columns: 1fr 1fr; /* 2 colunas no celular */
+  }
+  
+  /* No celular, a foto de perfil mantém o destaque ocupando o topo */
+  .galeria-autora img:first-child {
+    grid-column: span 2; 
+    grid-row: span 2;
+    min-height: 300px;
+  }
+}
