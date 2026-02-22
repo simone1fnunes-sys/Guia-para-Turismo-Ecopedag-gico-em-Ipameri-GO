@@ -1,0 +1,104 @@
+/* ─── PÁGINAS INTERNAS (Padrão para Autora, Créditos, etc) ─── */
+.page-padding {
+  padding-top: 120px; /* Espaço para não ficar embaixo da navbar fixa */
+  padding-bottom: 80px;
+  background-color: var(--white);
+  min-height: 100vh;
+}
+
+.container-sm {
+  max-width: 900px; /* Deixa o texto mais confortável para leitura do que usar os 1240px inteiros */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 42px);
+  color: var(--green-900);
+  margin-bottom: 64px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ─── BLOCOS DE CRÉDITOS ─── */
+.credito-block {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 64px;
+  padding-bottom: 64px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.credito-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.credito-content {
+  flex: 1;
+}
+
+.credito-content h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--green-900);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.credito-content p {
+  font-size: 16px;
+  color: var(--gray-700);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  text-align: justify; /* Na imagem original parece justificado */
+}
+
+.credito-content strong {
+  color: var(--green-700);
+  font-weight: 600;
+}
+
+.credito-image {
+  flex-shrink: 0;
+  width: 260px; /* Largura fixa para as fotos lateralizadas */
+}
+
+.credito-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  object-fit: cover;
+}
+
+/* ─── RESPONSIVIDADE PÁGINA DE CRÉDITOS ─── */
+@media (max-width: 768px) {
+  .page-padding {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  
+  .credito-block {
+    flex-direction: column; /* No celular a foto vai para baixo/cima do texto */
+    gap: 24px;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+  }
+
+  .credito-image {
+    width: 100%;
+    max-width: 300px; /* Limita o tamanho máximo no celular */
+    margin: 0 auto;
+  }
+  
+  .credito-content p {
+    text-align: left; /* Tira o justificado no mobile para melhor leitura */
+  }
+}
